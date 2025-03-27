@@ -3,10 +3,12 @@ import Sidebar from "./components/Sidebar";
 import AdminDashboard from "./pages/AdminDashboard";
 import HotelListings from "./pages/HotelListings";
 import VehicleListings from "./pages/VehicleListings";
+import TourGuides from "./pages/TourGuides";
 import Users from "./pages/Users";
 import Reports from "./pages/Reports";
 import UIManage from "./pages/UIManage";
 import ContactUs from "./pages/ContactUs";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
               <Routes>
                 <Route path="hotel-listings" element={<HotelListings />} />
                 <Route path="vehicle-listings" element={<VehicleListings />} />
+                <Route path="tour-guides" element={<TourGuides />} />
                 <Route path="users" element={<Users />} />
                 <Route path="reports" element={<Reports />} />
                 <Route path="ui-manage" element={<UIManage />} />

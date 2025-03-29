@@ -25,7 +25,7 @@ import greater_than_icon from './greater-than.png'
 
 
 
-import main1 from './main1.jpg'
+import MainImage1 from './MainImage1.jpg'
 import R1S1 from './imageR1S1.jpg'
 import R1S2 from './imageR1S2.jpg'
 import R1S3 from './imageR1S3.jpg'
@@ -57,7 +57,7 @@ export const hotels = [
         Price:200,
 
         decs:"Grand Horizons Hotel offers a luxurious stay with stunning ocean views, modern amenities, and exceptional service. Enjoy the serene ambiance and explore the rich cultural heritage of Galle.",
-        MainImage:main1,
+        MainImage1,
 
         roomType1:"Standard Room",	
         roomType1Fetures:"1 King Bed, 1 Bathroom, 1 Balcony, 1 Living Room, 1 Kitchen",

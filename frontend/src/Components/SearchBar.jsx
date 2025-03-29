@@ -7,7 +7,7 @@ const SearchBar = () => {
                 <input
                     type="text"
                     placeholder="Search hotels..."
-                    className="w-full bg-transparent text-white placeholder-gray-300 focus:outline-none"
+                    className="w-full bg-transparent text-blue-500 placeholder-gray-300 focus:outline-none"
                 />
                 <button className="text-white">
                     🔍

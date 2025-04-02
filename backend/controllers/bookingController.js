@@ -2,7 +2,7 @@ import Booking from "../models/bookingModel.js";
 
 const bookingHotel = async (req, res) => {
     try {
-        console.log("Received Data:", req.body);  // ✅ Log incoming data
+        console.log("Received Data:", req.body);  
 
         const {
             hotelId,

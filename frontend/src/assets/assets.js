@@ -37,6 +37,7 @@ import R1D3 from './imageR1D3.jpg'
 import R1D4 from './imageR1D4.jpg'
 import R1D5 from './imageR1D5.jpg'
 
+import logo from './logo.png'
 
 
 export const assets = {
@@ -44,32 +45,39 @@ export const assets = {
     location_icon,
     greater_than_icon,
     wallpaper1,
-    wallpaper2
+    wallpaper2,
+    logo
 }
 
 
 export const hotels = [
     {
-        Id:"H01",
-        Name:"Grand Horizons Hotel",
-        Location:"Galle, Sri Lanka",
-        Image:image1,
-        Price:200,
-
-        decs:"Grand Horizons Hotel offers a luxurious stay with stunning ocean views, modern amenities, and exceptional service. Enjoy the serene ambiance and explore the rich cultural heritage of Galle.",
-        MainImage1,
-
-        roomType1:"Standard Room",	
-        roomType1Fetures:"1 King Bed, 1 Bathroom, 1 Balcony, 1 Living Room, 1 Kitchen",
-        roomType1Amenties:"Free Wi-Fi, Air Conditioning, Hot Water, TV, Mini Fridge, Tea/Coffee Maker, Toiletries, Hair Dryer, Ironing Facilities, Safe, Room Service",
-        roomType1image:[R1S1, R1S2, R1S3, R1S4, R1S5], 
-
-        roomType2:"Deluxe Room",	
-        roomType2Fetures:"1 Queen Bed, 1 Bathroom, 1 Balcony, 1 Living Room, 1 Kitchen",
-        roomType2Amenties:"Free Wi-Fi, Air Conditioning, Hot Water, TV, Mini Fridge, Tea/Coffee Maker, Toiletries, Hair Dryer, Ironing Facilities, Safe, Room Service",
-        roomType2image:[R1D1, R1D2, R1D3, R1D4, R1D5], 
-        
-    },
+        Id: "H01",
+        Name: "Grand Horizons Hotel",
+        Location: "Galle, Sri Lanka",
+        Image: image1,
+        ImageArray: [image6, image2, image3, image4, image5],
+        Price: 200,
+        decs: "Nestled along the sun-kissed shores of Galle, Grand Horizons Hotel offers an unparalleled blend of modern elegance and tranquil coastal charm. Designed for discerning travelers, our hotel promises a sanctuary of relaxation, adventure, and cultural immersion.",
+    
+        roomType1: "Standard Room",
+        roomType1Features: "1 King Bed, 1 Bathroom, 1 Balcony, 1 Living Room, 1 Kitchen",
+        roomType1Amenities: "Free Wi-Fi, Air Conditioning, Hot Water, TV, Mini Fridge, Tea/Coffee Maker, Toiletries, Hair Dryer, Ironing Facilities, Safe, Room Service",
+        roomType1image: [R1S1, R1S2, R1S3, R1S4, R1S5],
+        room1Price: 200,
+        room1Size: "350 sq ft",
+        room1Occupancy: "Up to 2 adults + 1 child",
+        room1Perks: "Complimentary breakfast, late checkout (subject to availability)",
+    
+        roomType2: "Deluxe Room",
+        roomType2Features: "1 Queen Bed, 1 Bathroom, 1 Balcony, 1 Living Room, 1 Kitchen",
+        roomType2Amenities: "Free Wi-Fi, Air Conditioning, Hot Water, TV, Mini Fridge, Tea/Coffee Maker, Toiletries, Hair Dryer, Ironing Facilities, Safe, Room Service",
+        roomType2image: [R1D1, R1D2, R1D3, R1D4, R1D5],
+        room2Price: 500,
+        room2Size: "450 sq ft",
+        room2Occupancy: "Up to 3 adults or 2 adults + 2 children",
+        room2Perks: "Complimentary breakfast, access to executive lounge",
+      },
     {
         Id:"H02",
         Name:"The Beach Hotel",

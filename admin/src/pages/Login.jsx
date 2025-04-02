@@ -1,16 +1,17 @@
-// src/components/Login.jsx
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const { login } = useAuth()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your login logic here
-    console.log('Login:', { email, password });
-  };
+    e.preventDefault()
+    login(email, password)
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
@@ -64,7 +65,7 @@ const Login = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

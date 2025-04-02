@@ -6,9 +6,43 @@ import { FaHotel, FaCar, FaUserTie, FaUsers, FaChartBar, FaPaintBrush, FaSignOut
 const Sidebar = ({ onLogout }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< Updated upstream:frontend/src/components/Sidebar.jsx
   // Admin data (hardcoded for now)
   const adminName = "John Doe";
   const profilePhoto = null; // Set to null to simulate no profile photo; replace with adminImage if available
+=======
+  const handleLogout = useCallback(() => {
+    localStorage.removeItem('admin');
+    localStorage.removeItem('adminToken');
+    setIsOpen(false);
+    navigate('/admin/login');
+  }, [navigate]);
+
+  useEffect(() => {
+    const storedAdmin = localStorage.getItem('admin');
+    const token = localStorage.getItem('adminToken');
+
+    if (!token) {
+      navigate('/admin/login');
+      return;
+    }
+
+    fetch('/api/verify-admin-token', {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message === 'Token is valid' && storedAdmin) {
+          setAdmin(JSON.parse(storedAdmin));
+        } else {
+          handleLogout();
+        }
+      })
+      .catch(() => handleLogout());
+  }, [navigate, handleLogout]);
+>>>>>>> Stashed changes:frontend/src/components/SidebarAdmin.jsx
 
   // Function to get initials from the admin's name
   const getInitials = (name) => {
@@ -34,7 +68,11 @@ const Sidebar = ({ onLogout }) => {
       </button>
       {/* Sidebar */}
       <aside
+<<<<<<< Updated upstream:frontend/src/components/Sidebar.jsx
         className={`w-64 bg-indigo-900 text-white flex flex-col h-screen fixed md:static transition-transform duration-300 ${
+=======
+        className={`w-64 bg-indigo-900 text-white flex flex-col fixed md:sticky md:top-0 top-16 h-[calc(100vh-4rem)] md:h-screen transition-transform duration-300 ${
+>>>>>>> Stashed changes:frontend/src/components/SidebarAdmin.jsx
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         } z-40`}
         aria-hidden={!isOpen && "true"}
@@ -149,7 +187,28 @@ const Sidebar = ({ onLogout }) => {
                 onClick={() => setIsOpen(false)}
               >
                 <FaPaintBrush className="w-5 h-5" />
+<<<<<<< Updated upstream:frontend/src/components/Sidebar.jsx
                 <span>UI Manage</span>
+=======
+                <span>UI Manager</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/admin/register"
+                className={({ isActive }) =>
+                  `flex items-center space-x-2 p-4 hover:bg-pink-100 hover:text-black ${
+                    isActive ? "bg-pink-100 text-black" : ""
+                  }`
+                }
+                onClick={() => {
+                  generateAdminToken();
+                  setIsOpen(false);
+                }}
+              >
+                <FaUserPlus className="w-5 h-5" />
+                <span>Add New Admin</span>
+>>>>>>> Stashed changes:frontend/src/components/SidebarAdmin.jsx
               </NavLink>
             </li>
           </ul>
